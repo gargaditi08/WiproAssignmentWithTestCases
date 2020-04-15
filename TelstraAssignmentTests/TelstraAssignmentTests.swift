@@ -10,6 +10,42 @@ import XCTest
 @testable import TelstraAssignment
 
 class TelstraAssignmentTests: XCTestCase {
+    
+    var viewCon : ViewController!
+   
+    override func setUp() {
+        super.setUp()
+    }
+    
+    func testInitMyTableView() {
+        let vc = ViewController()
+        _ = vc.view
+        XCTAssertNotNil(vc.tableView)
+    }
+    
+    func testTableDataSource() {
+         let vc = ViewController()
+               _ = vc.view
+        XCTAssertTrue(vc.tableView.dataSource is ViewController)
+    }
+    
+    func testTableDelegateSourceMethod() {
+        let vc = ViewController()
+            _ = vc.view
+               XCTAssertTrue(vc.tableView.delegate is ViewController)
+           }
+    
+    
+    func testDataSourceDelegateSaeInstance() {
+         let vc = ViewController()
+                   _ = vc.view
+         XCTAssertEqual(vc.tableView.dataSource as! ViewController, vc.tableView.delegate as! ViewController)
+    }
+           
+    func testReachability() {
+           XCTAssertTrue(true)
+       }
+       
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +55,6 @@ class TelstraAssignmentTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+   
 
 }

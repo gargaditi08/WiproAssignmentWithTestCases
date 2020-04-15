@@ -8,12 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		CB2C3035244708E600BF66EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C3034244708E600BF66EA /* AppDelegate.swift */; };
-		CB2C3037244708E600BF66EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C3036244708E600BF66EA /* SceneDelegate.swift */; };
 		CB2C3039244708E600BF66EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C3038244708E600BF66EA /* ViewController.swift */; };
 		CB2C303C244708E600BF66EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303A244708E600BF66EA /* Main.storyboard */; };
 		CB2C303E244708E900BF66EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303D244708E900BF66EA /* Assets.xcassets */; };
 		CB2C3041244708E900BF66EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303F244708E900BF66EA /* LaunchScreen.storyboard */; };
 		CB2C304C244708EA00BF66EA /* TelstraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C304B244708EA00BF66EA /* TelstraAssignmentTests.swift */; };
+		CB2C30582447091300BF66EA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C30572447091300BF66EA /* Constant.swift */; };
+		CB2C305A2447092200BF66EA /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C30592447092200BF66EA /* AsyncImageView.swift */; };
+		CB2C305E2447098900BF66EA /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */; };
+		CB2C3060244709A100BF66EA /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C305F244709A100BF66EA /* DetailTableViewController.swift */; };
+		CB2C306424470A3A00BF66EA /* UpdatesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306324470A3A00BF66EA /* UpdatesViewModel.swift */; };
+		CB2C306724470A6500BF66EA /* CanaraUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306624470A6500BF66EA /* CanaraUpdates.swift */; };
+		CB2C306A24470A9100BF66EA /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306924470A9100BF66EA /* NetworkClient.swift */; };
+		CB2C306E24470ACF00BF66EA /* TableListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306D24470ACF00BF66EA /* TableListService.swift */; };
+		CB2C307124470B0000BF66EA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C307024470B0000BF66EA /* Reachability.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +37,6 @@
 /* Begin PBXFileReference section */
 		CB2C3031244708E600BF66EA /* TelstraAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2C3034244708E600BF66EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB2C3036244708E600BF66EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CB2C3038244708E600BF66EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB2C303B244708E600BF66EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB2C303D244708E900BF66EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +45,15 @@
 		CB2C3047244708EA00BF66EA /* TelstraAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstraAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2C304B244708EA00BF66EA /* TelstraAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraAssignmentTests.swift; sourceTree = "<group>"; };
 		CB2C304D244708EA00BF66EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB2C30572447091300BF66EA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CB2C30592447092200BF66EA /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateTableViewCell.swift; sourceTree = "<group>"; };
+		CB2C305F244709A100BF66EA /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		CB2C306324470A3A00BF66EA /* UpdatesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesViewModel.swift; sourceTree = "<group>"; };
+		CB2C306624470A6500BF66EA /* CanaraUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanaraUpdates.swift; sourceTree = "<group>"; };
+		CB2C306924470A9100BF66EA /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CB2C306D24470ACF00BF66EA /* TableListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListService.swift; sourceTree = "<group>"; };
+		CB2C307024470B0000BF66EA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +95,11 @@
 		CB2C3033244708E600BF66EA /* TelstraAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				CB2C3034244708E600BF66EA /* AppDelegate.swift */,
-				CB2C3036244708E600BF66EA /* SceneDelegate.swift */,
-				CB2C3038244708E600BF66EA /* ViewController.swift */,
+				CB2C306F24470AE900BF66EA /* NetworkReachability */,
+				CB2C306824470A7B00BF66EA /* ApiClient */,
+				CB2C306124470A0200BF66EA /* Application */,
+				CB2C305B2447095200BF66EA /* CanaraDetails */,
+				CB2C3056244708F900BF66EA /* Utility */,
 				CB2C303A244708E600BF66EA /* Main.storyboard */,
 				CB2C303D244708E900BF66EA /* Assets.xcassets */,
 				CB2C303F244708E900BF66EA /* LaunchScreen.storyboard */,
@@ -97,6 +115,84 @@
 				CB2C304D244708EA00BF66EA /* Info.plist */,
 			);
 			path = TelstraAssignmentTests;
+			sourceTree = "<group>";
+		};
+		CB2C3056244708F900BF66EA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C30572447091300BF66EA /* Constant.swift */,
+				CB2C30592447092200BF66EA /* AsyncImageView.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		CB2C305B2447095200BF66EA /* CanaraDetails */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C306524470A5200BF66EA /* Model */,
+				CB2C306224470A2000BF66EA /* ViewModel */,
+				CB2C305C2447096000BF66EA /* ViewController */,
+			);
+			path = CanaraDetails;
+			sourceTree = "<group>";
+		};
+		CB2C305C2447096000BF66EA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C3038244708E600BF66EA /* ViewController.swift */,
+				CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */,
+				CB2C305F244709A100BF66EA /* DetailTableViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		CB2C306124470A0200BF66EA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C3034244708E600BF66EA /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CB2C306224470A2000BF66EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C306324470A3A00BF66EA /* UpdatesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CB2C306524470A5200BF66EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C306624470A6500BF66EA /* CanaraUpdates.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CB2C306824470A7B00BF66EA /* ApiClient */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C306924470A9100BF66EA /* NetworkClient.swift */,
+				CB2C306C24470AB900BF66EA /* ApiService */,
+			);
+			path = ApiClient;
+			sourceTree = "<group>";
+		};
+		CB2C306C24470AB900BF66EA /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C306D24470ACF00BF66EA /* TableListService.swift */,
+			);
+			path = ApiService;
+			sourceTree = "<group>";
+		};
+		CB2C306F24470AE900BF66EA /* NetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C307024470B0000BF66EA /* Reachability.swift */,
+			);
+			path = NetworkReachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,9 +296,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2C3060244709A100BF66EA /* DetailTableViewController.swift in Sources */,
 				CB2C3039244708E600BF66EA /* ViewController.swift in Sources */,
+				CB2C306E24470ACF00BF66EA /* TableListService.swift in Sources */,
+				CB2C306724470A6500BF66EA /* CanaraUpdates.swift in Sources */,
 				CB2C3035244708E600BF66EA /* AppDelegate.swift in Sources */,
-				CB2C3037244708E600BF66EA /* SceneDelegate.swift in Sources */,
+				CB2C306424470A3A00BF66EA /* UpdatesViewModel.swift in Sources */,
+				CB2C306A24470A9100BF66EA /* NetworkClient.swift in Sources */,
+				CB2C307124470B0000BF66EA /* Reachability.swift in Sources */,
+				CB2C305A2447092200BF66EA /* AsyncImageView.swift in Sources */,
+				CB2C305E2447098900BF66EA /* UpdateTableViewCell.swift in Sources */,
+				CB2C30582447091300BF66EA /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

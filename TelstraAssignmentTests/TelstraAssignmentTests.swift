@@ -10,50 +10,40 @@ import XCTest
 @testable import TelstraAssignment
 
 class TelstraAssignmentTests: XCTestCase {
-    
-    var viewCon : ViewController!
-   
+    var viewCon : HomeViewController!
     override func setUp() {
         super.setUp()
     }
     
     func testInitMyTableView() {
-        let vc = ViewController()
+        let vc = HomeViewController()
         _ = vc.view
         XCTAssertNotNil(vc.tableView)
     }
     
     func testTableDataSource() {
-         let vc = ViewController()
+         let vc = HomeViewController()
                _ = vc.view
-        XCTAssertTrue(vc.tableView.dataSource is ViewController)
+        XCTAssertTrue(vc.tableView.dataSource is HomeViewController)
     }
     
     func testTableDelegateSourceMethod() {
-        let vc = ViewController()
+        let vc = HomeViewController()
             _ = vc.view
-               XCTAssertTrue(vc.tableView.delegate is ViewController)
+               XCTAssertTrue(vc.tableView.delegate is HomeViewController)
            }
     
     
     func testDataSourceDelegateSaeInstance() {
-         let vc = ViewController()
+         let vc = HomeViewController()
                    _ = vc.view
-         XCTAssertEqual(vc.tableView.dataSource as! ViewController, vc.tableView.delegate as! ViewController)
+         XCTAssertEqual(vc.tableView.dataSource as! HomeViewController, vc.tableView.delegate as! HomeViewController)
     }
            
     func testReachability() {
            XCTAssertTrue(true)
        }
        
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
    
 

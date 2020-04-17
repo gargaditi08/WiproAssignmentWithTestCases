@@ -10,25 +10,24 @@ import UIKit
 
 class UpdateTableViewCell: UITableViewCell {
     
-    var updates : Rows? {
+    var rowItem : Rows? {
         didSet{
-            guard let listItem = updates else  {return}
-            
-            if let title = listItem.title{
+            guard let listItem = rowItem else  {return}
+            titleLabel.text = nil
+            if let title = listItem.title {
                 titleLabel.text = title
-        }
-        updatesImageView.image = nil
-        if let imageURL = listItem.imageHref {
-            updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
-        }
-            
-            
-        if let description = listItem.description{
-            descriptionLabel.text = description
-           
+            }
+            updatesImageView.image = nil
+            if let imageURL = listItem.imageHref {
+                updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
+            }
+            descriptionLabel.text = nil
+            if let description = listItem.description{
+                descriptionLabel.text = description
+                
+            }
         }
     }
-}
     
     let updatesImageView: AsyncImageView = {
         let img = AsyncImageView()
@@ -38,7 +37,7 @@ class UpdateTableViewCell: UITableViewCell {
         img.clipsToBounds = true
         return img
     }()
-
+    
     let titleLabel : UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
@@ -53,8 +52,8 @@ class UpdateTableViewCell: UITableViewCell {
         label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textColor = .darkGray
         label.translatesAutoresizingMaskIntoConstraints = false
-            return label
-        }()
+        return label
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style : style, reuseIdentifier: reuseIdentifier)
@@ -62,7 +61,6 @@ class UpdateTableViewCell: UITableViewCell {
         self.contentView.addSubview(updatesImageView)
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(descriptionLabel)
-       
         
         
         updatesImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
@@ -72,21 +70,19 @@ class UpdateTableViewCell: UITableViewCell {
         
         let marginGuide = contentView.layoutMarginsGuide
         
-
+        
         titleLabel.leadingAnchor.constraint(equalTo: self.updatesImageView.trailingAnchor, constant: 10).isActive = true
         titleLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        titleLabel.numberOfLines = 0
-      
+        
+        
         descriptionLabel.leadingAnchor.constraint(equalTo: self.updatesImageView.trailingAnchor,constant: 10).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true
         descriptionLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-         descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
-        descriptionLabel.numberOfLines = 0
-        
+        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor).isActive = true
     }
-   
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-}
+    }
 }

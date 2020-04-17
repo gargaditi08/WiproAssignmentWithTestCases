@@ -15,7 +15,7 @@ struct CanadaUpdates : Codable {
 }
 
 struct Rows : Codable {
-   var title : String?
-   var description : String?
-   var imageHref : String?
+    var title : String?
+    var description : String?
+    var imageHref : String?
 }

@@ -23,12 +23,12 @@ final class NetworkClient
                 DispatchQueue.main.async {
                     completion(data, response, error)
                 }
-        })
-    }
+            })
+        }
         self.task?.resume()
-}
-
+    }
+    
     func cancel(){
         self.task?.cancel()
-}
+    }
 }

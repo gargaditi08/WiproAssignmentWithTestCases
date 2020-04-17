@@ -11,21 +11,21 @@ import UIKit
 class TableListService : NSObject {
     
     
-    var networkClient : NetworkClient =  NetworkClient()
+    var networkClient  =  NetworkClient()
     
     func getDataList(requestCompletion : @escaping (_ object: CanadaUpdates?,_ error: String?)->()) {
-    
+        
         let urlString = apiForCanaraDetails.BaseUrl
-              guard let url = URL(string: urlString) else {
-                requestCompletion(nil, "Invalid URL")
-                return
-            }
-            
+        guard let url = URL(string: urlString) else {
+            requestCompletion(nil, "Invalid URL")
+            return
+        }
+        
         let request = URLRequest(url:url)
         self.networkClient.loadRequest(request) { data, response, error in
-        
+            
             guard let httpResponse = response as? HTTPURLResponse else {
-                requestCompletion(nil, "Internal server error")
+                requestCompletion(nil, "Internet Connection Error")
                 return
             }
             
@@ -47,9 +47,9 @@ class TableListService : NSObject {
                 }catch {
                     print(error)
                 }
-                }
             }
-           
-}
+        }
+        
+    }
 }
 

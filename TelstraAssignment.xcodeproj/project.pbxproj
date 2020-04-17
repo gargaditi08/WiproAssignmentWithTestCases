@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB2C3035244708E600BF66EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C3034244708E600BF66EA /* AppDelegate.swift */; };
-		CB2C3039244708E600BF66EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C3038244708E600BF66EA /* ViewController.swift */; };
 		CB2C303C244708E600BF66EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303A244708E600BF66EA /* Main.storyboard */; };
 		CB2C303E244708E900BF66EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303D244708E900BF66EA /* Assets.xcassets */; };
 		CB2C3041244708E900BF66EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303F244708E900BF66EA /* LaunchScreen.storyboard */; };
@@ -22,6 +21,7 @@
 		CB2C306A24470A9100BF66EA /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306924470A9100BF66EA /* NetworkClient.swift */; };
 		CB2C306E24470ACF00BF66EA /* TableListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306D24470ACF00BF66EA /* TableListService.swift */; };
 		CB2C307124470B0000BF66EA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C307024470B0000BF66EA /* Reachability.swift */; };
+		CB2C307524482BCF00BF66EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C307424482BCF00BF66EA /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		CB2C3031244708E600BF66EA /* TelstraAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelstraAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2C3034244708E600BF66EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CB2C3038244708E600BF66EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CB2C303B244708E600BF66EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB2C303D244708E900BF66EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB2C3040244708E900BF66EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		CB2C306924470A9100BF66EA /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		CB2C306D24470ACF00BF66EA /* TableListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListService.swift; sourceTree = "<group>"; };
 		CB2C307024470B0000BF66EA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		CB2C307424482BCF00BF66EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				CB2C306524470A5200BF66EA /* Model */,
+				CB2C30732448272300BF66EA /* View */,
 				CB2C306224470A2000BF66EA /* ViewModel */,
 				CB2C305C2447096000BF66EA /* ViewController */,
 			);
@@ -139,8 +140,7 @@
 		CB2C305C2447096000BF66EA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				CB2C3038244708E600BF66EA /* ViewController.swift */,
-				CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */,
+				CB2C307424482BCF00BF66EA /* HomeViewController.swift */,
 				CB2C305F244709A100BF66EA /* DetailTableViewController.swift */,
 			);
 			path = ViewController;
@@ -193,6 +193,14 @@
 				CB2C307024470B0000BF66EA /* Reachability.swift */,
 			);
 			path = NetworkReachability;
+			sourceTree = "<group>";
+		};
+		CB2C30732448272300BF66EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +305,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB2C3060244709A100BF66EA /* DetailTableViewController.swift in Sources */,
-				CB2C3039244708E600BF66EA /* ViewController.swift in Sources */,
 				CB2C306E24470ACF00BF66EA /* TableListService.swift in Sources */,
 				CB2C306724470A6500BF66EA /* CanaraUpdates.swift in Sources */,
 				CB2C3035244708E600BF66EA /* AppDelegate.swift in Sources */,
@@ -307,6 +314,7 @@
 				CB2C305A2447092200BF66EA /* AsyncImageView.swift in Sources */,
 				CB2C305E2447098900BF66EA /* UpdateTableViewCell.swift in Sources */,
 				CB2C30582447091300BF66EA /* Constant.swift in Sources */,
+				CB2C307524482BCF00BF66EA /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

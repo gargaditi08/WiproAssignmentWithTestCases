@@ -32,9 +32,7 @@ class HomeViewController: UIViewController {
     //refresing Table Data
     @objc private func refreshTableData(_ sender: Any)
     {
-        checkReachability()
         self.viewModel.getUpdateList()
-        self.refreshControl.endRefreshing()
     }
     
     func tableViewSetup() {
@@ -55,22 +53,23 @@ class HomeViewController: UIViewController {
     }
     
     func getViewModelData(){
-            self.viewModel.getUpdateList()
-            self.viewModel.reloadData = { [weak self] in
-                self?.tableView.reloadData()
+        self.viewModel.getUpdateList()
+        self.viewModel.reloadData = { [weak self] in
+            self?.tableView.reloadData()
+        }
+        self.viewModel.passNavTitle = { [weak self] in
+            self!.navigationItem.title = self!.viewModel.titleNavbar
+        }
+        self.viewModel.errorOccured =  { [weak self] (error : String) in
+            guard let strongSelf = self else {
+                return
             }
-            self.viewModel.passNavTitle = { [weak self] in
-                self!.navigationItem.title = self!.viewModel.titleNavbar
+            DispatchQueue.main.async {
+                strongSelf.showAlertScreen(nil, message: error, alertTitle:"OK", responseHandler:nil)
+                self?.refreshControl.endRefreshing()
             }
-            self.viewModel.errorOccured =  { [weak self] (error : String) in
-                guard let strongSelf = self else {
-                    return
-                }
-                DispatchQueue.main.async {
-                    strongSelf.showAlertScreen(nil, message: error, alertTitle:"OK", responseHandler:nil)
-                }
-            }
-
+        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

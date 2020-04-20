@@ -14,9 +14,8 @@ class TableListService : NSObject {
     var networkClient  =  NetworkClient()
     
     func getDataList(requestCompletion : @escaping (_ object: CanadaUpdates?,_ error: String?)->()) {
-        if !(reachability?.isReachable == true){
+        if (reachability?.isReachable == false){
             requestCompletion(nil, "No internet Available")
-            self.refreshControl.endRefreshing()
              return
         }
         else{

@@ -49,24 +49,36 @@ class DetailTableViewController: UIViewController {
     }
     
     func updateConstraints(){
-        updatesImageView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
-        updatesImageView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
-        updatesImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 10).isActive = true
-        updatesImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
-        updatesImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        
-        
-        titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
-        titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
-        titleLabel.topAnchor.constraint(equalTo: updatesImageView.bottomAnchor,constant: 10).isActive = true
-        
-        
-        descriptionLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
-        descriptionLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
-        descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10).isActive = true
-        descriptionLabel.numberOfLines = 0
-        
         bindData()
+        if  ((updatesImageView.image != nil)) {
+            updatesImageView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
+            updatesImageView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
+            updatesImageView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 10).isActive = true
+            updatesImageView.widthAnchor.constraint(equalToConstant: 200).isActive = true
+            updatesImageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+            
+            
+            titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
+            titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
+            titleLabel.topAnchor.constraint(equalTo: updatesImageView.bottomAnchor,constant: 10).isActive = true
+            
+            
+            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10).isActive = true
+            descriptionLabel.numberOfLines = 0
+        }
+        else {
+            titleLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
+            titleLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
+            titleLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 10).isActive = true
+            
+            descriptionLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 20).isActive = true
+            descriptionLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10).isActive = true
+            descriptionLabel.numberOfLines = 0
+            
+        }
         
     }
     
@@ -79,10 +91,8 @@ class DetailTableViewController: UIViewController {
         updatesImageView.image = nil
         if let imageURL = updatesItem.imageHref{
             updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
-        }else
-        {
-            updatesImageView.image = UIImage(named: "noimg2")
         }
+        
         descriptionLabel.text = nil
         if let description = updatesItem.description{
             descriptionLabel.text = description

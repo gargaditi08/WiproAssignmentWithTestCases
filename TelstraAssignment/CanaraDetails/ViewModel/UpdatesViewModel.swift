@@ -16,7 +16,7 @@ final class UpdatesViewModel {
         }
     }
     var listService: TableListService = TableListService()
-    var apiErrorOccured: ((_ message: String)->())?
+    var errorOccured: ((_ message: String)->())?
     var reloadData: (()->())?
     var passNavTitle: (() ->())?
     
@@ -25,11 +25,10 @@ final class UpdatesViewModel {
     
     func getUpdateList(){
         self.listService.getDataList{ (result, error) in
-            
             if let canadaData = result {
                 self.canadaUpdate = canadaData
             }else if let errorMessage = error{
-                self.apiErrorOccured?(errorMessage)
+                self.errorOccured?(errorMessage)
                 
             }
         }

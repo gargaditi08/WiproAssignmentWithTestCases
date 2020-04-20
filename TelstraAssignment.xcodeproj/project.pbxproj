@@ -11,7 +11,6 @@
 		CB2C303C244708E600BF66EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303A244708E600BF66EA /* Main.storyboard */; };
 		CB2C303E244708E900BF66EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303D244708E900BF66EA /* Assets.xcassets */; };
 		CB2C3041244708E900BF66EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB2C303F244708E900BF66EA /* LaunchScreen.storyboard */; };
-		CB2C304C244708EA00BF66EA /* TelstraAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C304B244708EA00BF66EA /* TelstraAssignmentTests.swift */; };
 		CB2C30582447091300BF66EA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C30572447091300BF66EA /* Constant.swift */; };
 		CB2C305A2447092200BF66EA /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C30592447092200BF66EA /* AsyncImageView.swift */; };
 		CB2C305E2447098900BF66EA /* UpdateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C305D2447098900BF66EA /* UpdateTableViewCell.swift */; };
@@ -22,6 +21,9 @@
 		CB2C306E24470ACF00BF66EA /* TableListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C306D24470ACF00BF66EA /* TableListService.swift */; };
 		CB2C307124470B0000BF66EA /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C307024470B0000BF66EA /* Reachability.swift */; };
 		CB2C307524482BCF00BF66EA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2C307424482BCF00BF66EA /* HomeViewController.swift */; };
+		CBCA6E9F244D68D700DA0838 /* TableListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA6E9E244D68D700DA0838 /* TableListServiceTests.swift */; };
+		CBCA6EA1244D697F00DA0838 /* UpdateViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA6EA0244D697F00DA0838 /* UpdateViewModelTests.swift */; };
+		CBCA6EA3244D6AF600DA0838 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCA6EA2244D6AF600DA0838 /* HomeViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +44,6 @@
 		CB2C3040244708E900BF66EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB2C3042244708E900BF66EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2C3047244708EA00BF66EA /* TelstraAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelstraAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB2C304B244708EA00BF66EA /* TelstraAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelstraAssignmentTests.swift; sourceTree = "<group>"; };
 		CB2C304D244708EA00BF66EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2C30572447091300BF66EA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CB2C30592447092200BF66EA /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		CB2C306D24470ACF00BF66EA /* TableListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListService.swift; sourceTree = "<group>"; };
 		CB2C307024470B0000BF66EA /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		CB2C307424482BCF00BF66EA /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBCA6E9E244D68D700DA0838 /* TableListServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableListServiceTests.swift; sourceTree = "<group>"; };
+		CBCA6EA0244D697F00DA0838 /* UpdateViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewModelTests.swift; sourceTree = "<group>"; };
+		CBCA6EA2244D6AF600DA0838 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +115,10 @@
 		CB2C304A244708EA00BF66EA /* TelstraAssignmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB2C304B244708EA00BF66EA /* TelstraAssignmentTests.swift */,
 				CB2C304D244708EA00BF66EA /* Info.plist */,
+				CBCA6E9E244D68D700DA0838 /* TableListServiceTests.swift */,
+				CBCA6EA2244D6AF600DA0838 /* HomeViewControllerTests.swift */,
+				CBCA6EA0244D697F00DA0838 /* UpdateViewModelTests.swift */,
 			);
 			path = TelstraAssignmentTests;
 			sourceTree = "<group>";
@@ -322,7 +328,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2C304C244708EA00BF66EA /* TelstraAssignmentTests.swift in Sources */,
+				CBCA6E9F244D68D700DA0838 /* TableListServiceTests.swift in Sources */,
+				CBCA6EA1244D697F00DA0838 /* UpdateViewModelTests.swift in Sources */,
+				CBCA6EA3244D6AF600DA0838 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

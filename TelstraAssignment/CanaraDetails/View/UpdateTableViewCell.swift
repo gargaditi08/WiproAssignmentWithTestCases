@@ -21,6 +21,7 @@ class UpdateTableViewCell: UITableViewCell {
             if let imageURL = listItem.imageHref {
                 updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
             }
+           
             descriptionLabel.text = nil
             if let description = listItem.description{
                 descriptionLabel.text = description

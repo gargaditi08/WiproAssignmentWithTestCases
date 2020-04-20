@@ -55,25 +55,22 @@ class HomeViewController: UIViewController {
     }
     
     func getViewModelData(){
-        if reachability?.isReachable == true {
-        self.viewModel.getUpdateList()
-        self.viewModel.reloadData = { [weak self] in
-            self?.tableView.reloadData()
-        }
-        self.viewModel.passNavTitle = { [weak self] in
-            self!.navigationItem.title = self!.viewModel.titleNavbar
-        }
-        }
-        else {
-        self.viewModel.apiErrorOccured =  { [weak self] (error : String) in
-            guard let strongSelf = self else {
-                return
+            self.viewModel.getUpdateList()
+            self.viewModel.reloadData = { [weak self] in
+                self?.tableView.reloadData()
             }
-            DispatchQueue.main.async {
-                strongSelf.showAlertScreen(nil, message: error, alertTitle:"OK", responseHandler:nil)
+            self.viewModel.passNavTitle = { [weak self] in
+                self!.navigationItem.title = self!.viewModel.titleNavbar
             }
-        }
-        }
+            self.viewModel.errorOccured =  { [weak self] (error : String) in
+                guard let strongSelf = self else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    strongSelf.showAlertScreen(nil, message: error, alertTitle:"OK", responseHandler:nil)
+                }
+            }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -140,4 +137,5 @@ extension UIViewController {
         
     }
 }
+
 

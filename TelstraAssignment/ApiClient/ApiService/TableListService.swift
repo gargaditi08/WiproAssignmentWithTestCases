@@ -9,47 +9,49 @@
 import UIKit
 
 class TableListService : NSObject {
-    
-    
+    var reachability : Reachability? = Reachability.networkReachabilityForInternetConnection()
+    private let refreshControl = UIRefreshControl()
     var networkClient  =  NetworkClient()
     
     func getDataList(requestCompletion : @escaping (_ object: CanadaUpdates?,_ error: String?)->()) {
-        
-        let urlString = apiForCanaraDetails.BaseUrl
-        guard let url = URL(string: urlString) else {
-            requestCompletion(nil, "Invalid URL")
-            return
+        if !(reachability?.isReachable == true){
+            requestCompletion(nil, "No internet Available")
+            self.refreshControl.endRefreshing()
+             return
         }
-        
-        let request = URLRequest(url:url)
-        self.networkClient.loadRequest(request) { data, response, error in
-            
-            guard let httpResponse = response as? HTTPURLResponse else {
-                requestCompletion(nil, "Internet Connection Error")
+        else{
+            let urlString = apiForCanaraDetails.BaseUrl
+            guard let url = URL(string: urlString) else {
+                requestCompletion(nil, "Invalid URL")
                 return
             }
-            
-            if httpResponse.statusCode == 200{
-                guard let responseData = data else {
-                    requestCompletion(nil, "No Data Available")
+            let request = URLRequest(url:url)
+            self.networkClient.loadRequest(request) { data, response, error in
+                
+                guard let httpResponse = response as? HTTPURLResponse else {
+                    requestCompletion(nil, "Internet Connection Error")
                     return
                 }
-                
-                do {
-                    guard let utf8Data = String (decoding : responseData, as: UTF8.self).data(using: .utf8) else {
-                        requestCompletion(nil, "Encoding issue occured")
+                if httpResponse.statusCode == 200{
+                    guard let responseData = data else {
+                        requestCompletion(nil, "No Data Available")
                         return
                     }
-                    let jsonData = try JSONSerialization.jsonObject(with: utf8Data, options: .mutableContainers)
-                    print("API Response : \(jsonData)")
-                    let modeledResponse = try JSONDecoder().decode(CanadaUpdates.self, from: utf8Data)
-                    requestCompletion(modeledResponse,nil)
-                }catch {
-                    print(error)
+                    do {
+                        guard let utf8Data = String (decoding : responseData, as: UTF8.self).data(using: .utf8) else {
+                            requestCompletion(nil, "Encoding issue occured")
+                            return
+                        }
+                        let jsonData = try JSONSerialization.jsonObject(with: utf8Data, options: .mutableContainers)
+                        print("API Response : \(jsonData)")
+                        let modeledResponse = try JSONDecoder().decode(CanadaUpdates.self, from: utf8Data)
+                        requestCompletion(modeledResponse,nil)
+                    }catch {
+                        print(error)
+                    }
                 }
             }
         }
-        
     }
 }
 

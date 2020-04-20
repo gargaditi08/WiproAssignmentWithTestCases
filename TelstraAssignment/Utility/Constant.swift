@@ -18,8 +18,6 @@ struct apiForCanaraDetails {
 open class Utils : NSObject {
     internal static let shared = Utils()
     static let placeholderImg : UIImage = UIImage(named: "downloadImg")!
-    
-   
-
+ 
 }
 

@@ -77,9 +77,7 @@ class DetailTableViewController: UIViewController {
             descriptionLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -20).isActive = true
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor,constant: 10).isActive = true
             descriptionLabel.numberOfLines = 0
-            
         }
-        
     }
     
     func bindData(){
@@ -92,7 +90,6 @@ class DetailTableViewController: UIViewController {
         if let imageURL = updatesItem.imageHref{
             updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
         }
-        
         descriptionLabel.text = nil
         if let description = updatesItem.description{
             descriptionLabel.text = description

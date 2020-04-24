@@ -29,7 +29,6 @@ final class UpdatesViewModel {
                 self.canadaUpdate = canadaData
             }else if let errorMessage = error{
                 self.errorOccured?(errorMessage)
-                
             }
         }
     }
@@ -50,9 +49,7 @@ final class UpdatesViewModel {
     func updateAtIndex(index:Int) -> Rows? {
         guard let content = self.canadaUpdate else {return nil}
         return content.rows[index]
-        
     }
-    
 }
 
 

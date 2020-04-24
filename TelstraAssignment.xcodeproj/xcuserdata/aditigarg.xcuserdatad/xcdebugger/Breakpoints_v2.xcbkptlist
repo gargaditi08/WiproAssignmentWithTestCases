@@ -30,8 +30,8 @@
             filePath = "TelstraAssignment/CanaraDetails/ViewController/HomeViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
             landmarkName = "getViewModelData()"
             landmarkType = "7">
             <Locations>
@@ -46,8 +46,8 @@
                   urlString = "file:///Users/aditigarg/Desktop/TelstraAssignment/TelstraAssignment/CanaraDetails/ViewController/HomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
                   offsetFromSymbolStart = "375">
                </Location>
                <Location
@@ -61,27 +61,11 @@
                   urlString = "file:///Users/aditigarg/Desktop/TelstraAssignment/TelstraAssignment/CanaraDetails/ViewController/HomeViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
                   offsetFromSymbolStart = "128">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D115734F-6EFA-4C49-8C63-70F46EA93C02"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TelstraAssignment/ApiClient/ApiService/TableListService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "getDataList(requestCompletion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -98,6 +82,70 @@
             endingLineNumber = "53"
             landmarkName = "updateConstraints()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80BC8029-887B-46FF-8ECB-0638E9611A8D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelstraAssignmentTests/TableListServiceTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "testGetApiResult()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C5881BB9-EA75-4E75-8EFD-59753A942CB8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TelstraAssignmentTests/TableListServiceTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "testGetApiResult()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C5881BB9-EA75-4E75-8EFD-59753A942CB8 - 98382ad2471cb4ed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TelstraAssignmentTests.TableListServiceTests.testGetApiResult() -&gt; ()"
+                  moduleName = "TelstraAssignmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aditigarg/Desktop/TelstraAssignment/TelstraAssignmentTests/TableListServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "1006">
+               </Location>
+               <Location
+                  uuid = "C5881BB9-EA75-4E75-8EFD-59753A942CB8 - 6c538c1c22ca6270"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in TelstraAssignmentTests.TableListServiceTests.testGetApiResult() -&gt; ()"
+                  moduleName = "TelstraAssignmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aditigarg/Desktop/TelstraAssignment/TelstraAssignmentTests/TableListServiceTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "128">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

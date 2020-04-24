@@ -46,11 +46,7 @@ class AsyncImageView: UIImageView {
                     self?.image = placeholder
                 }
             }
-            
         }.resume()
-        
-        
     }
-    
 }
 

@@ -16,7 +16,7 @@ class TableListService : NSObject {
     func getDataList(requestCompletion : @escaping (_ object: CanadaUpdates?,_ error: String?)->()) {
         if (reachability?.isReachable == false){
             requestCompletion(nil, "No internet Available")
-             return
+            return
         }
         else{
             let urlString = apiForCanaraDetails.BaseUrl

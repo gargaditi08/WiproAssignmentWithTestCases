@@ -19,7 +19,6 @@ private var networkReachability : SCNetworkReachability?
 private var notifying : Bool = false
 
 public class Reachability: NSObject {
-    
     init?(hostName : String) {
         networkReachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, (hostName as NSString).utf8String!)
         super.init()
@@ -27,10 +26,8 @@ public class Reachability: NSObject {
             return nil
         }
     }
-    
     init?(hostAddress : sockaddr_in) {
         var address = hostAddress
-        
         guard  let defaultRouteReachablity = withUnsafePointer(to: &address,  {
             $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
                 SCNetworkReachabilityCreateWithAddress(kCFAllocatorDefault, $0)
@@ -38,23 +35,18 @@ public class Reachability: NSObject {
         }) else {
             return nil
         }
-        
         networkReachability = defaultRouteReachablity
-        
         super.init()
         if networkReachability == nil {
             return nil
         }
     }
-    
-    
     static func networkReachabilityForInternetConnection() -> Reachability? {
         var zeroAddress = sockaddr_in()
         zeroAddress.sin_len = UInt8(MemoryLayout.size(ofValue: zeroAddress))
         zeroAddress.sin_family = sa_family_t(AF_INET)
         return Reachability(hostAddress: zeroAddress)
     }
-    
     static func networkReachabilityForLocalWiFi() -> Reachability? {
         var localWifiAddress = sockaddr_in()
         localWifiAddress.sin_len = UInt8(MemoryLayout.size(ofValue: localWifiAddress))
@@ -88,7 +80,6 @@ public class Reachability: NSObject {
         notifying = true
         return notifying
     }
-    
     private var flags : SCNetworkReachabilityFlags {
         var flags = SCNetworkReachabilityFlags (rawValue: 0)
         if let reachability = networkReachability, withUnsafeMutablePointer(to: &flags, {SCNetworkReachabilityGetFlags(reachability, UnsafeMutablePointer($0))  }) == true  {
@@ -98,7 +89,6 @@ public class Reachability: NSObject {
             return []
         }
     }
-    
     var currentReachabilityStatus : ReachabilityStatusEnum {
         
         if flags.contains(.reachable) == false {
@@ -109,12 +99,10 @@ public class Reachability: NSObject {
             //WWAN connection are OK if the calling application is using the CFNetwork APIs.
             return.reachableViaWWAN
         }
-            
         else if flags.contains(.connectionRequired) == false {
             //If the target host is reachable and no connection is required then will assume that you are on Wifi
             return.reachableViaWifi
         }
-            
         else if (flags.contains(.connectionOnDemand) == true || flags.contains(.connectionOnTraffic) == true) && flags.contains(.interventionRequired) == false {
             //The connection is on demand (or on - Traffic)if the calling application is using the CFSocketStream or higher APIs and no [user] intervention is needed
             return.reachableViaWifi
@@ -123,7 +111,6 @@ public class Reachability: NSObject {
             return .notReachable
         }
     }
-    
     var isReachable : Bool {
         switch currentReachabilityStatus {
         case .notReachable:

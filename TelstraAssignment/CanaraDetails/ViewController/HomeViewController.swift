@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
         view.addSubview(tableView)
         self.tableViewSetup()
         self.getViewModelData()
-        
     }
     //refresing Table Data
     @objc private func refreshTableData(_ sender: Any)
@@ -69,7 +68,6 @@ class HomeViewController: UIViewController {
                 self?.refreshControl.endRefreshing()
             }
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -90,7 +88,6 @@ class HomeViewController: UIViewController {
     @objc func reachabilityDidChange(_ notification : Notification) {
         checkReachability()
     }
-    
 }
 
 //table view datasource extention
@@ -104,7 +101,6 @@ extension HomeViewController : UITableViewDataSource {
         cell.rowItem = self.viewModel.updateAtIndex(index: indexPath.row)
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return UITableView.automaticDimension

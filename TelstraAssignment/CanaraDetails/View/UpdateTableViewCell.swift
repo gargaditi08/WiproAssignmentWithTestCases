@@ -9,7 +9,6 @@
 import UIKit
 
 class UpdateTableViewCell: UITableViewCell {
-    
     var rowItem : Rows? {
         didSet{
             guard let listItem = rowItem else  {return}
@@ -21,11 +20,10 @@ class UpdateTableViewCell: UITableViewCell {
             if let imageURL = listItem.imageHref {
                 updatesImageView.loadAsyncFrom(url: imageURL, placeholder: Utils.placeholderImg)
             }
-           
+            
             descriptionLabel.text = nil
             if let description = listItem.description{
                 descriptionLabel.text = description
-                
             }
         }
     }
@@ -63,7 +61,6 @@ class UpdateTableViewCell: UITableViewCell {
         self.contentView.addSubview(titleLabel)
         self.contentView.addSubview(descriptionLabel)
         
-        
         updatesImageView.centerYAnchor.constraint(equalTo: self.contentView.centerYAnchor).isActive = true
         updatesImageView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor, constant: 10).isActive = true
         updatesImageView.widthAnchor.constraint(equalToConstant: 50).isActive = true
@@ -71,11 +68,9 @@ class UpdateTableViewCell: UITableViewCell {
         
         let marginGuide = contentView.layoutMarginsGuide
         
-        
         titleLabel.leadingAnchor.constraint(equalTo: self.updatesImageView.trailingAnchor, constant: 10).isActive = true
         titleLabel.topAnchor.constraint(equalTo: marginGuide.topAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo: marginGuide.trailingAnchor).isActive = true
-        
         
         descriptionLabel.leadingAnchor.constraint(equalTo: self.updatesImageView.trailingAnchor,constant: 10).isActive = true
         descriptionLabel.bottomAnchor.constraint(equalTo: marginGuide.bottomAnchor).isActive = true

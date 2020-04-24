@@ -13,7 +13,7 @@ class UpdateViewModelTests: XCTestCase {
     var listService = TableListService()
     var canadaUpdates: CanadaUpdates?
     override func setUp() {
-           super.setUp()
+        super.setUp()
         
     }
     func testGetUpdateList() {
@@ -27,8 +27,8 @@ class UpdateViewModelTests: XCTestCase {
     func testTitleOfTableData() {
         if let titleMain = self.canadaUpdates {
             XCTAssertTrue(titleMain.title! == "About Canada")
+        }
     }
-}
     func testUpdateTableCellForRow() {
         if let rowsValue = self.canadaUpdates {
             XCTAssertNotNil(rowsValue.rows)
